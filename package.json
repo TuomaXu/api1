@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "json": "./node_modules/.bin/mocha -R json   --require babel-register > r.json",
+    "test": "./node_modules/.bin/mocha  --require babel-register -R mochawesome",
+    "start": "./node_modules/.bin/nodemon index.js --exec ./node_modules/.bin/babel-node",
+    "upload": "npm run test; npm run json; node upload.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-espower": "^3.0.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.4",
+    "nodemon": "^1.18.9",
+    "power-assert": "^1.6.1",
+    "scanf": "^1.0.2",
+    "sequelize": "^4.42.0",
+    "supertest": "^3.4.2"
+  }
+}
